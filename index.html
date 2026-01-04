@@ -1,139 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> Don’t let the sweet vibe fool you… I can be trouble.😻 </title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title> Warning: cute face ahead! Don't say I didn't warn you... 😻 </title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-    }
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-    .box, .video-page {
-        background: white;
-        padding: 20px 25px;
-        width: 320px;
-        text-align: center;
-        border-radius: 12px;
-        box-shadow: 0 0 12px rgba(0,0,0,0.1);
-    }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f0f0f;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    color: #fff;
+}
 
-    .video-link {
-        background: #1b1f23;
-        color: white;
-        padding: 12px;
-        border-radius: 6px;
-        display: block;
-        margin: 15px 0;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 14px;
-    }
+.page {
+    width: 100%;
+    max-width: 420px;
+    padding: env(safe-area-inset-top) 10px env(safe-area-inset-bottom);
+}
 
-    .btn {
-        padding: 12px 14px;
-        border: none;
-        border-radius: 6px;
-        font-size: 16px;
-        font-weight: bold;
-        cursor: pointer;
-        width: 48%;
-        color: white;
-    }
-    .ok { background: #1dbf00; }
-    .exit { background: #cc0000; }
+.ad-top {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
 
-    .btn-wrapper {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 10px;
-    }
+/* WRAPPER LUAR */
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 10px 30px rgba(0,0,0,.6);
+    cursor: pointer;
+}
 
-    /* LP2 VIDEO STYLE */
-    .video-page {
-        display: none;
-    }
+/* GRADIENT OVERLAY */
+.video-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to bottom,
+        rgba(0,0,0,.18),
+        rgba(0,0,0,0),
+        rgba(0,0,0,.28)
+    );
+    pointer-events: none;
+}
 
-    video {
-        width: 100%;
-        border-radius: 10px;
-        margin-bottom: 12px;
+/* WRAPPER DALAM */
+.video-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* VIDEO */
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* MATIKAN FULLSCREEN BUTTON */
+video::-webkit-media-controls-fullscreen-button {
+    display: none !important;
+}
+
+@media (min-width: 768px) {
+    .video-wrapper {
+        height: 560px;
     }
+}
 </style>
 </head>
+
 <body>
 
-<!-- LP1 (Halaman Awal) -->
-<div class="box" id="lp1">
+<div class="page">
 
-    <!-- BANNER ATAS -->
-    <div style="margin-bottom:15px;">
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'cf902c3f231d99e4ed78299963127fdb',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//buffetaccommodating.com/cf902c3f231d99e4ed78299963127fdb/invoke.js"></script>
+    <!-- IKLAN -->
+    <div class="ad-top">
+        <script>
+        atOptions = {
+            'key' : '176376f281e0f17f9cde96ca0cb7cd4c',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+        };
+        </script>
+        <script src="https://beginshello.com/176376f281e0f17f9cde96ca0cb7cd4c/invoke.js"></script>
     </div>
 
-    <h2>Click Link to Watch</h2>
-
-    <a href="#" class="video-link" onclick="openVideo()">
-        https://cdn.videy.co/pN6334dH1.mp4
-    </a>
-
-    <div class="btn-wrapper">
-        <button class="btn ok" onclick="openVideo()">I AM 18+</button>
-        <button class="btn exit" onclick="openAds()">EXIT</button>
+    <!-- VIDEO -->
+    <div class="video-wrapper">
+        <div class="video-inner">
+            <video autoplay muted loop playsinline webkit-playsinline preload="auto"
+                disablePictureInPicture
+                controlsList="nodownload noremoteplayback nofullscreen">
+                <source src="https://cdn.videy.co/698KNiIG1.mp4" type="video/mp4">
+            </video>
+        </div>
     </div>
+
 </div>
-
-
-<!-- LP2 (halaman video di dalam LP yang sama) -->
-<div class="video-page" id="lp2">
-<script type="text/javascript">
-	atOptions = {
-		'key' : 'cf902c3f231d99e4ed78299963127fdb',
-		'format' : 'iframe',
-		'height' : 50,
-		'width' : 320,
-		'params' : {}
-	};
-</script>
-<script type="text/javascript" src="//buffetaccommodating.com/cf902c3f231d99e4ed78299963127fdb/invoke.js"></script>
-    <video controls autoplay>
-        <source src="https://cdn.videy.co/pN6334dH1.mp4" type="video/mp4">
-    </video>
-
-    <button class="btn ok" style="width:100%;" onclick="openAds()">Continue</button>
-</div>
-
 
 <script>
-function openVideo() {
-    document.getElementById("lp1").style.display = "none";
-    document.getElementById("lp2").style.display = "block";
-}
+const video = document.querySelector("video");
 
-function openAds() {
-    window.location.href = "https://cdn-sude078.github.io";
-}
+/* AUTO PLAY FIX */
+video.play().catch(() => {});
+
+/* TAP SEKALI = UNMUTE */
+let tapped = false;
+video.addEventListener("click", () => {
+    if (!tapped) {
+        video.muted = false;
+        tapped = true;
+    }
+});
+
+/* ANTI FULLSCREEN */
+video.addEventListener("webkitbeginfullscreen", e => e.preventDefault());
+document.addEventListener("fullscreenchange", () => {
+    if (document.fullscreenElement) {
+        document.exitFullscreen();
+    }
+});
 </script>
 
-</body>
-</html>
-<!-- Histats.com  START  (aync)-->
+    <!-- Histats.com  START  (aync)-->
 <script type="text/javascript">var _Hasync= _Hasync|| [];
 _Hasync.push(['Histats.start', '1,4992245,4,511,95,18,00000000']);
 _Hasync.push(['Histats.fasi', '1']);
@@ -145,3 +158,6 @@ hs.src = ('//s10.histats.com/js15_as.js');
 })();</script>
 <noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4992245&101" alt="" border="0"></a></noscript>
 <!-- Histats.com  END  -->
+
+</body>
+</html>
